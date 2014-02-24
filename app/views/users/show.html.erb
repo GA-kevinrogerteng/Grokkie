@@ -1,0 +1,10 @@
+<h1> <%= @user.username %> </h1><br>
+<%= @user.email %><br>
+
+<%= @user.twitter_name %> <br>
+<%= @user.github_name %> <br>
+<%= @user.bio %> <br>
+
+<% if current_user == @user %>
+<%= link_to "Edit Profile", edit_user_path(current_user) %>
+<% end %>
